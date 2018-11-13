@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup as BS
 from config import (
     IMAGE_DIR,
     OUTFILE_PATH,
-) 
+)
 
 
 class Downloader():
@@ -32,7 +32,7 @@ class Downloader():
                 result = None
                 if url:
                     result = Downloader.download_image_by_url(url, id_)
-                
+
                 if not result:
                     error_count += 1
 

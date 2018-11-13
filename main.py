@@ -6,7 +6,7 @@ from utils import write_data
 from config import (
     LOCAL,
     PROJECT_NAME,
-) 
+)
 
 
 def main():
