@@ -1,5 +1,6 @@
 # Project-specific
 config.py
+images/
 data/reddit.json
 
 # Byte-compiled / optimized / DLL files

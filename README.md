@@ -25,9 +25,19 @@ SUBREDDIT = 'pics'
 MAX_POSTS = 1000
 
 outfile = 'reddit.json'
-target_dir = '{}/data/'.format(os.getcwd())
-if not os.path.exists(target_dir):
-    os.makedirs(target_dir)
+cwd = os.getcwd()
+target_data_dir = f'{cwd}/data/'
+if not os.path.exists(target_data_dir):
+    os.makedirs(target_data_dir)
+OUTFILE_PATH = target_data_dir + outfile
 
-OUTFILE_PATH = target_dir + outfile
+IMAGE_DIR = f'{cwd}/images/'
+if not os.path.exists(IMAGE_DIR):
+    os.makedirs(IMAGE_DIR)
+
+LOCAL = True
+
+# For local testing, just use the sample Reddit data instead of hitting API every single time
+if LOCAL:
+    OUTFILE_PATH = target_data_dir + 'sample-reddit.json'
 ```
